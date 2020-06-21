@@ -19,6 +19,12 @@ defmodule GflapielixirWeb.Router do
     get "/", PageController, :index
   end
 
+  scope "/group", GflapielixirWeb do
+    pipe_through :api
+
+    get "/", PerkController, :showgroup
+  end
+
   # Other scopes may use custom stacks.
   # scope "/api", GflapielixirWeb do
   #   pipe_through :api

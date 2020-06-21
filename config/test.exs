@@ -16,7 +16,8 @@ config :gflapielixir, Gflapielixir.Repo,
 # you can enable the server option below.
 config :gflapielixir, GflapielixirWeb.Endpoint,
   http: [port: 4002],
-  server: false
+  server: false,
+  token: "MYTOKEN"
 
 # Print only warnings and errors during test
 config :logger, level: :warn

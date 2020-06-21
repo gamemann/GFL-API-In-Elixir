@@ -13,6 +13,10 @@ defmodule GflapielixirWeb.Router do
     plug :accepts, ["json"]
   end
 
+  pipeline :authenticate do
+    plug Gflapielixir.Plugs.Authenticate
+  end
+
   scope "/", GflapielixirWeb do
     pipe_through :browser
 
@@ -20,7 +24,7 @@ defmodule GflapielixirWeb.Router do
   end
 
   scope "/group", GflapielixirWeb do
-    pipe_through :api
+    pipe_through [:authenticate, :api]
 
     get "/", PerkController, :showgroup
   end

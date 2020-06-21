@@ -28,7 +28,8 @@ config :gflapielixir, GflapielixirWeb.Endpoint,
       "--watch-stdin",
       cd: Path.expand("../assets", __DIR__)
     ]
-  ]
+  ],
+  token: "MYTOKEN"
 
 # ## SSL Support
 #

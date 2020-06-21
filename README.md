@@ -5,7 +5,7 @@ The GFL API written in Elixir. I'm writing this project to practice Elixir, a fu
 ## Installation
 1. Install a MySQL server.
 
-2. Modify your environment config in `config/<env>.exs` and configure the MySQL details along with the authorization token (`Token` variable).
+2. Modify your environment config in `config/<env>.exs` and configure the MySQL details along with the authorization token (`token` variable).
 
 3. Create database by running `mix ecto.create`.
 

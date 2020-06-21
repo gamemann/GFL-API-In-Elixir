@@ -23,7 +23,7 @@ defmodule GflapielixirWeb.Router do
     get "/", PageController, :index
   end
 
-  scope "/group", GflapielixirWeb do
+  scope "/donators", GflapielixirWeb do
     pipe_through [:authenticate, :api]
 
     get "/", PerkController, :showgroup
